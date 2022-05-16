@@ -4,3 +4,91 @@
     margin: 0;
     box-sizing: border-box;
 }
+/*-------------Class dùng chung-------------------------------------*/
+.justify--center /* Căn giữa */
+{
+    justify-content: center !important;
+}
+.collums__divide--by3 /* Chia cột làm 3 */
+{
+    position : relative;
+    width: 33.3333333333333%;
+}
+.row
+{
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+
+
+/*------------------------ Dương------------------------------------ */
+.portfolio__title
+{
+    padding-bottom: 30px;
+}
+.portfolio__title h2
+{
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: #173b6c;
+}
+.portfolio__title h2::after
+{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #149ddd;
+    bottom: 0;
+    left: 0;
+}
+#portfolio__filter
+{
+    margin: 0 auto 35px auto;
+    list-style: none;
+    text-align: center;
+    background: #fff;
+    border-radius: 50px;
+    padding: 2px 15px;
+    flex: 0 0 auto;
+    width: 100%;
+}
+#portfolio__filter li
+{
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 15px 8px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #272829;
+    margin-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+}
+#portfolio__filter li:hover
+{
+    color: #149ddd;
+}
+.portfolio_item
+{
+    margin-bottom: 30px;
+    padding: 0 12px;
+    width: 33.33333333333%;
+    flex: auto;
+}
+
+
+
+
+
+/*------------------------------------------------------------------*/
