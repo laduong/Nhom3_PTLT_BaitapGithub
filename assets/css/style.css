@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*Reset Css*/
 *{
     padding: 0;
@@ -194,3 +195,126 @@
 
 
 /*------------------------------------------------------------------*/
+/* Đây là phần css của anh Hinh */
+.row {
+    display: inline-block;
+    
+}
+
+.info-col {
+    position: relative;
+    float: left;
+    padding: 0 20px;
+}
+
+.col-4 {
+    width: calc(100% / 4);
+}
+
+.col-2 {
+    width: calc(100% / 2);
+}
+
+.col-2_3 {
+    width: calc(200% / 3);
+}
+
+.center {
+    position: absolute;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.rec {
+    width: 100%;
+    height: 13px;
+    background: #00f;
+    
+}
+
+#container{
+    height: 100%;
+    width: 90%;
+    margin: auto;
+    text-align: justify;
+}
+
+#container .container-title{
+    display: inline-block;
+    margin-top: 50px;
+}
+
+#container .title-bar {
+    height: 3px;
+    width: 50px;
+    background: #00f;
+    margin: 25px 2px;
+}
+
+#container .about-row {
+    display: inline-block;
+}
+    
+#container .skills-col{
+    margin: auto;
+}
+
+#container .about-avt {
+    width: 70%;
+}
+
+
+@media (min-width: 900px) {
+    #container .facts-col-1 {
+        float: left;
+        width: calc(100%/2);
+    }
+
+    #container .skills-col{
+        float: left;
+        width: calc(100%/2);
+        padding: 0 40px;
+    }
+
+    #container .about-row {
+        display: inline-block;
+        height: calc(100%);
+    }
+
+    #container .about-avt {
+        width: 30%;
+        float: left;
+    }
+
+    #container .about-col{
+        float: left;
+        width: calc(200% / 3);
+        padding: 0 20px;
+    }
+
+    .info-col{
+        width: calc(100%/2);
+    }
+}
+
+@media (max-width: 900px) {
+    #container .about-avt {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #container .skills-col{
+        padding: 0 20px;
+
+    }
+}
+
+@media (min-width: 600px) {
+    #container .facts-col-2 {
+        float: left;
+        width: calc(100%/2);
+        padding: 0 10px;
+    }
+}
