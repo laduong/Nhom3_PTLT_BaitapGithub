@@ -17,7 +17,7 @@ new Swiper('.portfolio-details-slider', {
 /**
 * Testimonials slider
 */
-new Swiper('.testimonials-slider', {
+new Swiper('.testimonials__slider', {
  speed: 600,
  loop: true,
  autoplay: {
@@ -26,7 +26,7 @@ new Swiper('.testimonials-slider', {
  },
  slidesPerView: 'auto',
  pagination: {
-   el: '.swiper-pagination',
+   el: '.testimonial__slider--navigator',
    type: 'bullets',
    clickable: true
  },

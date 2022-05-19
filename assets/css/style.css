@@ -12,7 +12,7 @@
 }
 .collums__divide--by3 /* Chia cột làm 3 */
 {
-    position : relative;
+    flex: 0,0 auto;
     width: 33.3333333333333%;
 }
 .row
@@ -31,6 +31,10 @@
 }
 
 /*------------------------ Dương------------------------------------ */
+#portfolio
+{
+    padding: 60px 0;
+}
 .portfolio__title
 {
     padding-bottom: 30px;
@@ -109,15 +113,16 @@
 {
     opacity: 0.8;
 }
-.portfolio__filter:hover .portfolio__link
-{
-    background: rgba(20, 157, 221, 0.95);
-}
 .portfolio__link
 {
-    width: 100%;
-    height: 42px;
+    opacity: 1;
+    left: 0;
+    right: 0;
+    bottom: -60px;
+    z-index: 3;
     position: absolute;
+    transition: all ease-in-out 0.3s;
+    display: flex;
     justify-content: center;
 }
 .portfolio__lightbox
@@ -133,6 +138,27 @@
 {
     background: rgba(20, 157, 221, 0.95);
 }
+.portfolio__filter:hover::before
+{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+}
+.portfolio__filter::before
+{
+    content: "";
+    background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all ease-in-out 0.3s;
+    z-index: 2;
+    opacity: 0;
+}
 .portfolio__filter
 {
     transition: 0.3s;
@@ -140,6 +166,78 @@
     overflow: hidden;
     z-index: 1;
 }
+/*------------------End Portfolio-------------------------*/
+
+/*=================================Service=================================================*/
+#service
+{
+    padding: 30px 0;
+}
+.service__title
+{
+    padding-bottom: 30px;
+}
+.service__title h2
+{
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: #173b6c;
+}
+.service__title h2::after
+{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #149ddd;
+    bottom: 0;
+    left: 0;
+}
+.service__content
+{
+    margin-bottom: 20px;
+    padding: 0 12px;
+}
+.service__content--icon
+{
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    background: #149ddd;
+    border-radius: 50%;
+    transition: 0.5s;
+    border: 1px solid #149ddd;
+}
+.service__content h4
+{
+    margin-left: 80px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+.service__content--discription
+{
+    margin-left: 80px;
+    line-height: 24px;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+/*---------------------------------------End Service----------------------------------------*/
 .testimonial__title
 {
     padding-bottom: 30px;
@@ -164,47 +262,43 @@
     bottom: 0;
     left: 0;
 }
-
-#testimonial .testimonials-carousel, .testimonials .testimonials-slider {
+.testimonial__slider
+{
     overflow: hidden;
-  }
-  #testimonial .testimonial-item {
+}
+.testimonial__slides
+{
+    width: 133.3333%;
+    overflow: hidden;
+    display: flex;
+}
+.testimonial__slider--warp
+{
+    width: 33.33333%;
+    transition: 0.6s;
+}
+.testimonial__slider--item {
     box-sizing: content-box;
     text-align: center;
     min-height: 320px;
   }
-  #testimonial .testimonial-item .testimonial-img {
-    width: 90px;
+.testimonial__slider--img {
+    width: 180px;
     border-radius: 50%;
     margin: 0 auto;
   }
-  #testimonial .testimonial-item h3 {
+.testimonial__slider--item h3 {
     font-size: 18px;
     font-weight: bold;
     margin: 10px 0 5px 0;
     color: #111;
   }
-  #testimonial .testimonial-item h4 {
+  .testimonial__slider--item h4 {
     font-size: 14px;
     color: #999;
     margin: 0;
   }
-  #testimonial .testimonial-item .quote-icon-left, .testimonials .testimonial-item .quote-icon-right {
-    color: #c3e8fa;
-    font-size: 26px;
-  }
-  #testimonial .testimonial-item .quote-icon-left {
-    display: inline-block;
-    left: -5px;
-    position: relative;
-  }
-  #testimonial .testimonial-item .quote-icon-right {
-    display: inline-block;
-    right: -5px;
-    position: relative;
-    top: 10px;
-  }
-  #testimonial .testimonial-item p {
+.testimonial__slider--item p {
     font-style: italic;
     margin: 0 15px 15px 15px;
     padding: 20px;
@@ -214,7 +308,7 @@
     border-radius: 6px;
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   }
-  #testimonial .testimonial-item p::after {
+.testimonial__slider--item p::after {
     content: "";
     width: 0;
     height: 0;
@@ -225,24 +319,68 @@
     bottom: -20px;
     left: calc(50% - 20px);
   }
-  #testimonial .swiper-pagination {
-    margin-top: 20px;
+  .testimonial__slider--item p
+  {
+    font-style: italic;
+    margin: 0 15px 15px 15px;
+    padding: 20px;
+    background: #fff;
     position: relative;
+    margin-bottom: 35px;
+    border-radius: 6px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   }
-  #testimonial .swiper-pagination .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    background-color: #fff;
-    opacity: 1;
+  .testimonial__slider--item p::after
+  {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 20px solid #fff;
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+    position: absolute;
+    bottom: -20px;
+    left: calc(50% - 20px);
+  }
+.testimonial__slider--navigator input
+{
+    display: none;
+}
+.navigator--manual
+{
+    margin-top: 20px;
+    position: absolute;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    line-height: 4px;
+}
+.navigator__btn--manual
+{
     border: 1px solid #149ddd;
-  }
-  #testimonial .swiper-pagination .swiper-pagination-bullet-active {
+    padding : 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+    width: 20px;
+    height: 20px;
+}
+.navigator__btn--manual:hover
+{
     background-color: #149ddd;
-  }
-
-
-
-
+}
+.navigator__btn--manual:not(:last-child)
+{
+    margin-right: 20px;
+}
+#r1:checked ~ .first    
+{
+    margin-left: 0%;
+}
+#r2:checked ~ .first
+{
+    margin-left: -33.333%;
+}
 /*------------------------------------------------------------------*/
 /* Đây là phần css của anh Hinh */
 .row {
