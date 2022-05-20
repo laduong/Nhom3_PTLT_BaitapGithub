@@ -33,7 +33,11 @@
 /*------------------------ Dương------------------------------------ */
 #portfolio
 {
-    padding: 60px 0;
+    width: 90%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .portfolio__title
 {
@@ -171,7 +175,11 @@
 /*=================================Service=================================================*/
 #service
 {
-    padding: 30px 0;
+    width: 90%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .service__title
 {
@@ -238,6 +246,14 @@
 
 
 /*---------------------------------------End Service----------------------------------------*/
+#testimonial
+{
+    width: 90%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
 .testimonial__title
 {
     padding-bottom: 30px;
@@ -262,124 +278,73 @@
     bottom: 0;
     left: 0;
 }
-.testimonial__slider
+.testimonial__card
 {
-    overflow: hidden;
+    border-radius: 6px;
+    padding: 25px 35px;
+    transition: all 0.3 ease-in-out;
 }
-.testimonial__slides
+.testimonial__card--box
 {
-    width: 133.3333%;
-    overflow: hidden;
     display: flex;
-}
-.testimonial__slider--warp
-{
-    width: 33.33333%;
-    transition: 0.6s;
-}
-.testimonial__slider--item {
+    flex-direction: column;
     box-sizing: content-box;
     text-align: center;
     min-height: 320px;
-  }
-.testimonial__slider--img {
-    width: 180px;
-    border-radius: 50%;
-    margin: 0 auto;
-  }
-.testimonial__slider--item h3 {
+}
+.testimonial__card--box p
+{
+    font-style: italic;
+    margin: 0 15px 15px 15px;
+    padding: 20px;
+    background: #fff;
+    position: relative;
+    margin-bottom: 35px;
+    border-radius: 6px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+.testimonial__card .fa-quote-left, .testimonial__card .fa-quote-right
+{
+    color: #c3e8fa;
+    font-size: 26px;
+    font-style: italic;
+}
+.testimonial__card--box h3
+{
     font-size: 18px;
     font-weight: bold;
     margin: 10px 0 5px 0;
     color: #111;
-  }
-  .testimonial__slider--item h4 {
+}
+.testimonial__card--box h4
+{
     font-size: 14px;
     color: #999;
     margin: 0;
-  }
-.testimonial__slider--item p {
-    font-style: italic;
-    margin: 0 15px 15px 15px;
-    padding: 20px;
-    background: #fff;
-    position: relative;
-    margin-bottom: 35px;
-    border-radius: 6px;
-    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  }
-.testimonial__slider--item p::after {
-    content: "";
-    width: 0;
-    height: 0;
-    border-top: 20px solid #fff;
-    border-right: 20px solid transparent;
-    border-left: 20px solid transparent;
-    position: absolute;
-    bottom: -20px;
-    left: calc(50% - 20px);
-  }
-  .testimonial__slider--item p
-  {
-    font-style: italic;
-    margin: 0 15px 15px 15px;
-    padding: 20px;
-    background: #fff;
-    position: relative;
-    margin-bottom: 35px;
-    border-radius: 6px;
-    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  }
-  .testimonial__slider--item p::after
-  {
-    content: "";
-    width: 0;
-    height: 0;
-    border-top: 20px solid #fff;
-    border-right: 20px solid transparent;
-    border-left: 20px solid transparent;
-    position: absolute;
-    bottom: -20px;
-    left: calc(50% - 20px);
-  }
-.testimonial__slider--navigator input
-{
-    display: none;
 }
-.navigator--manual
+.testimonial__img
 {
+    width: 90px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.owl-dots
+{
+    text-align: center;
     margin-top: 20px;
-    position: absolute;
-    justify-content: center;
-    display: flex;
-    width: 100%;
-    line-height: 4px;
 }
-.navigator__btn--manual
+.owl-dot
 {
-    border: 1px solid #149ddd;
-    padding : 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
-    width: 20px;
-    height: 20px;
+    height: 15px;
+    width: 15px;
+    border: 1px solid #149ddd!important;
+    background-color: #fff;
+    margin: 0 15px;
+    border-radius: 25px;
 }
-.navigator__btn--manual:hover
+.owl-dot:hover, .owl-dot.active
 {
-    background-color: #149ddd;
-}
-.navigator__btn--manual:not(:last-child)
-{
-    margin-right: 20px;
-}
-#r1:checked ~ .first    
-{
-    margin-left: 0%;
-}
-#r2:checked ~ .first
-{
-    margin-left: -33.333%;
+    background-color: #0dcaf0!important;
 }
 /*------------------------------------------------------------------*/
 /* Đây là phần css của anh Hinh */
