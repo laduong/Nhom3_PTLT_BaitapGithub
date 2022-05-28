@@ -98,6 +98,20 @@
     width: 33.33333333333%;
     flex: auto;
 }
+@media (max-width:920px)
+{
+    .portfolio_item
+    {
+        width: 50%;
+    }
+}
+@media (max-width: 700px)
+{
+    .portfolio_item
+    {
+        width: 100%;
+    }
+}
 .portfolio__imagecontainer
 {
     --bs-gutter-x: 1.5rem;
@@ -209,6 +223,20 @@
 {
     margin-bottom: 20px;
     padding: 0 12px;
+}
+@media(max-width: 920px)
+{
+    .collums__divide--by3
+    {
+        width: 50%;
+    }
+}
+@media(max-width: 700px)
+{
+    .collums__divide--by3
+    {
+        width: 100%;
+    }
 }
 .service__content--icon
 {
@@ -393,8 +421,12 @@
 }
 
 #container .container-title{
-    display: block;
-    color: #026;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: #173b6c;
 }
 
 #container .title-bar {
@@ -531,13 +563,13 @@
     }
 }
 /*=================================Nguyên================================*/
-/* #contact{
+#contact{
     width: 90%;
     padding-top: 30px;
     padding-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
-} */
+} 
 .contact{
     padding-bottom: 130px;
 }
